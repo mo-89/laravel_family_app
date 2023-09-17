@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/parentitems', [ParentItemController::class, 'index'])->name('parentitems.index');
 Route::get('/create', [ParentItemController::class, 'create']);
 Route::post('/store', [ParentItemController::class, 'store'])->name('parentitems.store');
 

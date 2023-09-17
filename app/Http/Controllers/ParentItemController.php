@@ -11,6 +11,14 @@ use Illuminate\Support\Facades\Log;
 
 class ParentItemController extends Controller
 {
+
+    public function index()
+    {
+        $parentItems = ParentItem::with('children')->get();
+
+        return view('index', ['parentItems' => $parentItems]);
+    }
+
     public function create()
     {
         return view('create');
