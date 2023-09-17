@@ -15,6 +15,4 @@ class ParentItem extends Model
     {
         return $this->hasMany(Child::class);
     }
-
-
 }

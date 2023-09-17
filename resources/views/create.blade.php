@@ -13,18 +13,21 @@
 
 <form action="{{ route('parentitems.store') }}" method="post">
     @csrf
-    <div>
-        <label for="parent_name">Parent Name:</label>
-        <input type="text" id="parent_name" name="parent_name" required>
-    </div>
 
-    <div>
-        <label for="child_name">Child Name:</label>
-        <input type="text" id="child_name" name="child_name" required>
-    </div>
+    <!-- Parent name input -->
+    <label for="parent[name]">Parent Name:</label>
+    <input type="text" id="parent[name]" name="parent[name]" required>
 
+    <br><br>
+    <!-- Child name input -->
+    <label for="child[name]">Child Name:</label>
+    <input type="text" id="child[name]" name="child[name]" required>
+
+    <br><br>
+    <!-- Submit button -->
     <button type="submit">Submit</button>
 </form>
+
 
 </body>
 </html>

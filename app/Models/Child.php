@@ -10,7 +10,7 @@ class Child extends Model
     use HasFactory;
 
     protected $fillable = [
-        'parent_id',
+        'parent_item_id',
         'name'
 
     ];

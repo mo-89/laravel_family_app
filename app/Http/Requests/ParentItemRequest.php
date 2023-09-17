@@ -22,8 +22,8 @@ class ParentItemRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'parent_name' => 'required|string',
-            'child_name' => 'required|string'
+            'parent.name' => 'required|string|max:5',
+            'child.name'  => 'required|string|max:5',
         ];
     }
 }
