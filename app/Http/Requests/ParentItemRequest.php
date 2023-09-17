@@ -25,5 +25,16 @@ class ParentItemRequest extends FormRequest
             'parent.name' => 'required|string|max:5',
             'child.name'  => 'required|string|max:5',
         ];
+        // sample request
+        // [2023-09-17 04:18:12] local.INFO: array (
+        //     'parent' =>
+        //     array (
+        //       'name' => 'o11',
+        //     ),
+        //     'child' =>
+        //     array (
+        //       'name' => 'k11',
+        //     ),
+        //   )
     }
 }
