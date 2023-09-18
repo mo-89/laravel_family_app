@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ParentItemRequest;
 use App\Models\ParentItem;
 use App\Models\Child;
+use App\Http\Resources\ParentItemResource;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
@@ -16,6 +17,7 @@ class ParentItemController extends Controller
     {
         $parentItems = ParentItem::with('children')->get();
 
+        // return ParentItemResource::collection($parentItems);
         return view('index', ['parentItems' => $parentItems]);
     }
 
